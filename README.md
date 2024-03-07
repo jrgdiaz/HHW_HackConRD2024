@@ -1,10 +1,11 @@
-
 # Hardware Hacking Workshop - HackConRD 2024
 
 **Español**
+
 Este repositorio contiene la documentacion para el badge oficial del HackConRD 2024.
  
 **English**
+
 This repository contains the documentation for the official HackConRD 2024 badge.
 
 ![3D Rendering](https://i.ibb.co/QQbCyDQ/badge-hackconrd-2024.png)
