@@ -12,11 +12,11 @@ This repository contains the documentation for the official HackConRD 2024 badge
 
 **¿Qué son los badges?**
 
-Los badges son una expresión artística de la cultura hacker, son impulsados por la comunidad y dentro de ella se convierten en piezas memorables de colección. Este nicho/dinámica es popularmente conocida como "Badgelife". Para esta primera iteración del badge oficial del HackConRD utilizamos el logo de la conferencia marcando así el inicio del Badgelife en nuestro hogar y querida comunidad del HackConRD. 
+Los badges son una expresión artística de la cultura hacker, son impulsados por la comunidad y dentro de ella se convierten en piezas memorables de colección. Este nicho/dinámica es popularmente conocida como "Badgelife". En esta primera iteración del badge oficial del HackConRD utilizamos el logo de la conferencia marcando así el inicio del Badgelife en nuestro hogar y querida comunidad del HackConRD <3. 
 
 **What is a badge?**
 
-Badges are an artistic expression of hacker culture, they are driven by the community and within it they become memorable collector's items. This niche/dynamic is popularly known as “Badgelife”. For this first iteration of the official HackConRD badge we used the conference logo, thus marking the beginning of Badgelife in our home and beloved HackConRD community.
+Badges are an artistic expression of hacker culture, they are driven by the community and within it they become memorable collector's items. This niche/dynamic is popularly known as “Badgelife”. For this first iteration of the official HackConRD badge we used the conference logo, thus marking the beginning of Badgelife in our home and beloved HackConRD community <3.
 
 **¿Cómo se utiliza un badge?**
 
@@ -30,9 +30,67 @@ The badges are worn with a lanyard around the neck and worn during the conferenc
 
 [BadgeLife - A Hackaday Documentary](https://youtu.be/G2fHKRONc6U)
 
-# Files
+# Características del HackConRD 2024 badge
 
-StackEdit stores your files in your browser, which means all your files are automatically saved locally and are accessible **offline!**
+El badge utiliza el microcontrolador ATTiny85, fabricado por Microchip Technology (anteriormente Atmel), es un popular microcontrolador AVR de 8 bits conocido por su tamaño compacto y versatilidad. Estas son algunas características generales del ATtiny85:
+
+1.  **Flash Memory**: 8 KB
+2.  **SRAM**: 512 bytes
+3.  **I/O Pins**: 6
+4.  **Operating Voltage**: 1.8V - 5.5V
+5.  **Clock Speed**: 8 MHz
+
+Estas características hacen que el ATtiny85 sea adecuado para una amplia gama de aplicaciones integradas, incluidos dispositivos IoT, sensores, electrónica de consumo y más, donde el espacio, el costo y la eficiencia energética son factores críticos.
+
+En el siguiente enlace se encuentra el datasheet del ATTiny85:
+
+[Datasheet ATTiny85](https://ww1.microchip.com/downloads/en/devicedoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf)
+
+# HackConRD 2024 Badge Features
+
+The badge uses the ATTiny85 microcontroller, manufactured by Microchip Technology (formerly Atmel), is a popular 8-bit AVR microcontroller known for its compact size and versatility. These are some general features of the ATtiny85:
+
+1. **Flash Memory**: 8 KB
+2. **SRAM**: 512 bytes
+3. **I/O Pins**: 6
+4. **Operating voltage**: 1.8V - 5.5V
+5. **Clock speed**: 8 MHz
+
+These features make the ATtiny85 suitable for a wide range of embedded applications, including IoT devices, sensors, consumer electronics and more, where space, cost and power efficiency are critical factors.
+
+At the following link you will find the ATTiny85 data sheet:
+
+[Datasheet ATTiny85](https://ww1.microchip.com/downloads/en/devicedoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf)
+
+**PINOUT**
+
+![Pinout](https://cdn.sparkfun.com/r/600-600/assets/f/8/f/d/9/52713d5b757b7fc0658b4567.png)
+ 
+# Archivos de Fabricación
+
+El badge se hizo con la intencion de ser completamente abierto para la comunidad en general. En el zip HackConRD_Badge_Fab-main.zip podemos encontrar el archivo de KiCad con el diseño final.
+
+# Manufacturing Files
+
+The badge was made with the intention of being completely open to the community at large. In the HackConRD_Badge_Fab-main.zip zip we can find the KiCad file with the final design. 
+
+# Firmware
+
+**Español**
+
+Para la conferencia el badge viene con firmware desarrollado especificamente para el evento, pero es 100% reprogramable, incluyendo el bootloader. 
+
+**English**
+
+At the conference the badge comes with firmware developed specifically for the event, but it is 100% reprogrammable, including the bootloader.
+
+# Interfaz Serial
+
+![Serial Interface PINOUT](https://i.ibb.co/bLPRZWr/Serial-Interface.png)
+
+```
+<p style="color:blue">Make this text blue.</p>
+```
 
 ## Create files and folders
 
