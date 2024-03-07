@@ -84,13 +84,47 @@ Para la conferencia el badge viene con firmware desarrollado especificamente par
 
 At the conference the badge comes with firmware developed specifically for the event, but it is 100% reprogrammable, including the bootloader.
 
-# Interfaz Serial
+# Interfaz Serial | Serial Interface
 
-![Serial Interface PINOUT](https://i.ibb.co/bLPRZWr/Serial-Interface.png)
+![Serial Interface PINOUT](https://i.ibb.co/VNCmMMP/Serial-Interface.png)
 
-- ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) `#f03c15`
-- ![#c5f015](https://placehold.co/15x15/c5f015/c5f015.png) `#c5f015`
-- ![#1589F0](https://placehold.co/15x15/1589F0/1589F0.png) `#1589F0`
+
+- ![BROWN](https://placehold.co/15x15/964B00/964B00.png) 5V
+- ![YELLOW](https://placehold.co/15x15/FFFF00/FFFF00.png) GND
+
+- ![RED](https://placehold.co/15x15/f03c15/f03c15.png) RX
+
+- ![ORANGE](https://placehold.co/15x15/FFA500/FFA500.PNG) TX
+
+- ![PURPLE](https://placehold.co/15x15/A020F0/A020F0.PNG) I/O PIN 7
+
+- ![WHITE](https://placehold.co/15x15/FFFFFF/FFFFFF.PNG) RESET PIN <-> BUTTON
+
+![USB-TTL-HACKCONBADGE](https://i.ibb.co/Gd4bFtx/Whats-App-Image-2024-03-07-at-8-34-28-PM.jpg)
+
+## Solo 9 LEDs aRGB? :( 
+
+**No :D**
+
+Tambien podemos agregar LEDs aRGB externos y programar diferentes patrones de animacion con los 3 pines que se encuentran expuestos en el board (**Al lado de D9**). 
+
+Imaginate todas las animaciones de LEDs que **ChatGPT** puede generar por ti.
+
+## Only 9 aRGB LEDs? :(
+
+**No :D**
+
+We can also add external aRGB LEDs and program different animation patterns with the 3 pins that are exposed on the board (**Next to D9**).
+
+Imagine all the LED animations **ChatGPT** can generate for you.
+
+![enter image description here](https://i.ibb.co/xmcKsxw/tempsnip.png)
+
+- ![RED](https://placehold.co/15x15/f03c15/f03c15.png) DO
+- ![BLUE](https://placehold.co/15x15/0000FF/0000FF.png) 5V
+-  ![GREEN](https://placehold.co/15x15/00FF00/00FF00.png) GND
+
+
 
 
 ## Create files and folders
