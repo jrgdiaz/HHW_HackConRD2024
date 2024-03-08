@@ -32,7 +32,7 @@ The badges are worn with a lanyard around the neck and worn during the conferenc
 
 # Características del HackConRD 2024 badge
 
-El badge utiliza el microcontrolador ATTiny85, fabricado por Microchip Technology (anteriormente Atmel), es un popular microcontrolador AVR de 8 bits conocido por su tamaño compacto y versatilidad. Estas son algunas características generales del ATtiny85:
+El badge utiliza el microcontrolador ATTiny85, fabricado por Microchip Technology (anteriormente Atmel), es un popular microcontrolador AVR de 8 bits conocido por su tamaño compacto y versatilidad. Estas son algunas características generales del ATTiny85:
 
 1.  **Flash Memory**: 8 KB
 2.  **SRAM**: 512 bytes
@@ -40,7 +40,7 @@ El badge utiliza el microcontrolador ATTiny85, fabricado por Microchip Technolog
 4.  **Operating Voltage**: 1.8V - 5.5V
 5.  **Clock Speed**: 8 MHz
 
-Estas características hacen que el ATtiny85 sea adecuado para una amplia gama de aplicaciones integradas, incluidos dispositivos IoT, sensores, electrónica de consumo y más, donde el espacio, el costo y la eficiencia energética son factores críticos.
+Estas características hacen que el ATTiny85 sea adecuado para una amplia gama de aplicaciones integradas, incluidos dispositivos IoT, sensores, electrónica de consumo y más, donde el espacio, el costo y la eficiencia energética son factores críticos.
 
 En el siguiente enlace se encuentra el datasheet del ATTiny85:
 
@@ -48,7 +48,7 @@ En el siguiente enlace se encuentra el datasheet del ATTiny85:
 
 # HackConRD 2024 Badge Features
 
-The badge uses the ATTiny85 microcontroller, manufactured by Microchip Technology (formerly Atmel), is a popular 8-bit AVR microcontroller known for its compact size and versatility. These are some general features of the ATtiny85:
+The badge uses the ATTiny85 microcontroller, manufactured by Microchip Technology (formerly Atmel), is a popular 8-bit AVR microcontroller known for its compact size and versatility. These are some general features of the ATTiny85:
 
 1. **Flash Memory**: 8 KB
 2. **SRAM**: 512 bytes
@@ -56,7 +56,7 @@ The badge uses the ATTiny85 microcontroller, manufactured by Microchip Technolog
 4. **Operating voltage**: 1.8V - 5.5V
 5. **Clock speed**: 8 MHz
 
-These features make the ATtiny85 suitable for a wide range of embedded applications, including IoT devices, sensors, consumer electronics and more, where space, cost and power efficiency are critical factors.
+These features make the ATTiny85 suitable for a wide range of embedded applications, including IoT devices, sensors, consumer electronics and more, where space, cost and power efficiency are critical factors.
 
 At the following link you will find the ATTiny85 data sheet:
 
@@ -68,7 +68,7 @@ At the following link you will find the ATTiny85 data sheet:
  
 # Archivos de Fabricación
 
-El badge se hizo con la intencion de ser completamente abierto para la comunidad en general. En el zip HackConRD_Badge_Fab-main.zip podemos encontrar el archivo de KiCad con el diseño final.
+El badge se hizo con la intención de ser completamente abierto para la comunidad en general. En el zip HackConRD_Badge_Fab-main.zip podemos encontrar el archivo de KiCad con el diseño final.
 
 # Manufacturing Files
 
@@ -78,11 +78,11 @@ The badge was made with the intention of being completely open to the community 
 
 **Español**
 
-Para la conferencia el badge viene con firmware desarrollado especificamente para el evento, pero es 100% reprogramable, incluyendo el bootloader. 
+Para la conferencia el badge viene con firmware desarrollado específicamente para el evento e incluye desafíos y secretos, pero es 100% reprogramable, incluyendo el bootloader. 
 
 **English**
 
-At the conference the badge comes with firmware developed specifically for the event, but it is 100% reprogrammable, including the bootloader.
+At the conference the badge comes with firmware developed specifically for the event and includes challenges and hidden features, but it is 100% reprogrammable, including the bootloader.
 
 # Interfaz Serial | Serial Interface
 
@@ -106,6 +106,8 @@ At the conference the badge comes with firmware developed specifically for the e
 
 **No :D**
 
+El badge utiliza el PIN fisico 2 para controlar los LEDs aRGB.
+
 Tambien podemos agregar LEDs aRGB externos y programar diferentes patrones de animacion con los 3 pines que se encuentran expuestos en el board (**Al lado de D9**). 
 
 Imaginate todas las animaciones de LEDs que **ChatGPT** puede generar por ti.
@@ -113,6 +115,8 @@ Imaginate todas las animaciones de LEDs que **ChatGPT** puede generar por ti.
 ## Only 9 aRGB LEDs? :(
 
 **No :D**
+
+The badge uses physical PIN 2 to control the aRGB LEDs.
 
 We can also add external aRGB LEDs and program different animation patterns with the 3 pins that are exposed on the board (**Next to D9**).
 
@@ -125,139 +129,76 @@ Imagine all the LED animations **ChatGPT** can generate for you.
 -  ![GREEN](https://placehold.co/15x15/00FF00/00FF00.png) GND
 
 
+## Sonido
 
+El badge utiliza el PIN físico 3 para controlar el buzzer
 
-## Create files and folders
+El buzzer integrado puede utilizarse para generar melodias.
 
-The file explorer is accessible using the button in left corner of the navigation bar. You can create a new file by clicking the **New file** button in the file explorer. You can also create folders by clicking the **New folder** button.
+## Sound
 
-## Switch to another file
+The badge uses physical PIN 3 to control the buzzer.
 
-All your files and folders are presented as a tree in the file explorer. You can switch from one to another by clicking a file in the tree.
+The built-in buzzer can be used to generate melodies.
 
-## Rename a file
+## Instalar el bootloader al ATTiny85
 
-You can rename the current file by clicking the file name in the navigation bar or by clicking the **Rename** button in the file explorer.
+Podemos utilizar el IDE de Arduino para quemar el bootloader a nuestro badge. Para esto, lo primero que debemos hacer es instalar el IDE de Arduino como tal y luego ir a File > Preferences > Additional Board Manager URLs e ingresamos el siguiente URL: 
 
-## Delete a file
+**http://drazzy.com/package_drazzy.com_index.json**
 
-You can delete the current file by clicking the **Remove** button in the file explorer. The file will be moved into the **Trash** folder and automatically deleted after 7 days of inactivity.
+Este archivo JSON contiene el famoso proyecto ATTinyCore hecho por [SpenceKonde](https://github.com/SpenceKonde), el cual nos permite utilizar las librerias de Arduino sobre el ATTiny.
 
-## Export a file
+Luego que especificamos el nuevo URL podemos ir a Tools > Board > Board Manager y buscamos el "ATTiny" en la barra de busqueda. Selecionamos el proyecto ATTinyCore el cual ya deberia ser visible y finalmente le damos a Install. Luego de esto los Boards de ATTiny aparecen en la seccion de Tools > Board > ATTinyCore
 
-You can export the current file by clicking **Export to disk** in the menu. You can choose to export the file as plain Markdown, as HTML using a Handlebars template or as a PDF.
+**Nuestro chip es el ATTiny45/85 (Optiboot)**
 
+Optiboot se refiere al bootloader que utilizaremos, existen otros pero Optiboot es bastante popular para nuestro propósito que es hacer del ATTiny85 un playground donde podemos reprogramar el chip fácilmente. Ahora que Arduino IDE tiene instalado ATTinyCore podemos proceder a realizar las conexiones necesarias para instalar el bootloader. Para esto utilizamos la interfaz serial del badge y un Arduino Nano **CON EL SKETCH Arduino ISP** auxiliar (recomendado).
 
-# Synchronization
+**No sera necesario instalar el bootloader al badge de HackConRD 2024 ya que viene con el instalado. Esta seccion es solo para documentar como instalar el bootloader si fuese necesario, para mas informacion pueden ver el siguiente video, donde se explica el mismo proceso:**
 
-Synchronization is one of the biggest features of StackEdit. It enables you to synchronize any file in your workspace with other files stored in your **Google Drive**, your **Dropbox** and your **GitHub** accounts. This allows you to keep writing on other devices, collaborate with people you share the file with, integrate easily into your workflow... The synchronization mechanism takes place every minute in the background, downloading, merging, and uploading file modifications.
+ [How To Program An Attiny85 With An Arduino Nano](https://www.youtube.com/watch?v=h9b01GlaEKQ)
 
-There are two types of synchronization and they can complement each other:
+## Install the bootloader to ATTiny85
 
-- The workspace synchronization will sync all your files, folders and settings automatically. This will allow you to fetch your workspace on any other device.
-	> To start syncing your workspace, just sign in with Google in the menu.
+We can use the Arduino IDE to burn the bootloader to our badge. For this, the first thing we must do is install the Arduino IDE as such and then go to File > Preferences > Additional Board Manager URLs and enter the following URL:
 
-- The file synchronization will keep one file of the workspace synced with one or multiple files in **Google Drive**, **Dropbox** or **GitHub**.
-	> Before starting to sync files, you must link an account in the **Synchronize** sub-menu.
+**http://drazzy.com/package_drazzy.com_index.json**
 
-## Open a file
+This JSON file contains the famous ATTinyCore project made by [SpenceKonde](https://github.com/SpenceKonde), which allows us to use the Arduino libraries on the ATTiny.
 
-You can open a file from **Google Drive**, **Dropbox** or **GitHub** by opening the **Synchronize** sub-menu and clicking **Open from**. Once opened in the workspace, any modification in the file will be automatically synced.
+After we specify the new URL we can go to Tools > Board > Board Manager and search for "ATTiny" in the search bar. We select the ATTinyCore project which should already be visible and finally click Install. After this, the ATTiny Boards appear in the Tools > Board > ATTinyCore section.
 
-## Save a file
+**Our chip is ATTiny45/85 (Optiboot)**
 
-You can save any file of the workspace to **Google Drive**, **Dropbox** or **GitHub** by opening the **Synchronize** sub-menu and clicking **Save on**. Even if a file in the workspace is already synced, you can save it to another location. StackEdit can sync one file with multiple locations and accounts.
+Optiboot refers to the bootloader that we will use, there are others but Optiboot is quite popular for our purpose, which is to make the ATTiny85 a playground where we can easily reprogram the chip. Now that the Arduino IDE has ATTinyCore installed we can proceed to make the necessary connections to install the bootloader. For this we use the serial interface of the badge and an auxiliary Arduino Nano **WITH THE Arduino ISP SKETCH** (recommended).
 
-## Synchronize a file
+**It will not be necessary to install the bootloader to the HackConRD 2024 badge since it comes with it installed. This section is only to document how to install the bootloader if necessary, for more information you can watch the following video, where the same process is explained:**
 
-Once your file is linked to a synchronized location, StackEdit will periodically synchronize it by downloading/uploading any modification. A merge will be performed if necessary and conflicts will be resolved.
+ [How To Program An Attiny85 With An Arduino Nano](https://www.youtube.com/watch?v=h9b01GlaEKQ)
 
-If you just have modified your file and you want to force syncing, click the **Synchronize now** button in the navigation bar.
+Finally, we proceed in the Arduino IDE with Tools > Burn Bootloader, with the same ATTiny45/85 (Optiboot) that we had selected previously.
 
-> **Note:** The **Synchronize now** button is disabled if you have no file to synchronize.
+# Conexiones para quemar Bootloader | Connections to Burn Bootloader onto ATTiny85
 
-## Manage file synchronization
+- ![BROWN](https://placehold.co/15x15/964B00/964B00.png) 5V <-> 5V Arduino Nano
+- ![YELLOW](https://placehold.co/15x15/FFFF00/FFFF00.png) GND <-> GND
 
-Since one file can be synced with multiple locations, you can list and manage synchronized locations by clicking **File synchronization** in the **Synchronize** sub-menu. This allows you to list and remove synchronized locations that are linked to your file.
+- ![RED](https://placehold.co/15x15/f03c15/f03c15.png)  RX <-> D11
 
+- ![ORANGE](https://placehold.co/15x15/FFA500/FFA500.PNG) TX <-> D12
 
-# Publication
+- ![PURPLE](https://placehold.co/15x15/A020F0/A020F0.PNG) I/O PIN 7 <-> D13
 
-Publishing in StackEdit makes it simple for you to publish online your files. Once you're happy with a file, you can publish it to different hosting platforms like **Blogger**, **Dropbox**, **Gist**, **GitHub**, **Google Drive**, **WordPress** and **Zendesk**. With [Handlebars templates](http://handlebarsjs.com/), you have full control over what you export.
+- ![WHITE](https://placehold.co/15x15/FFFFFF/FFFFFF.PNG) RESET PIN <-> D10
 
-> Before starting to publish, you must link an account in the **Publish** sub-menu.
+Finalmente, procedemos en el Arduino IDE con Tools > Burn Bootloader, con el mismo  ATTiny45/85 (Optiboot) que habiamos seleccionado anteriormente.
 
-## Publish a File
+## Cargar código de Arduino IDE al HackConRD Badge
 
-You can publish your file by opening the **Publish** sub-menu and by clicking **Publish to**. For some locations, you can choose between the following formats:
+Para esto simplemente hacemos las conexiones al convertidor de USB a Serial con el badge, conectamos a la maquina y le damos "Upload" al código en el IDE de Arduino, al realizar esta acción el código compilara y si no hay errores de sintaxis se procedera a cargar el programa. Cuando el IDE empiece a cargar el programa (Cuando Arduino IDEA diga **Uploading**) reiniciamos el badge PRESIONANDO el botón de reset para que el bootloader acepte la escritura del nuevo firmware en memoria. 
 
-- Markdown: publish the Markdown text on a website that can interpret it (**GitHub** for instance),
-- HTML: publish the file converted to HTML via a Handlebars template (on a blog for example).
+## Upload Arduino IDE code on the HackConRD Badge
 
-## Update a publication
+For this we simply make the connections to the USB to Serial converter with the badge, connect to the machine and "Upload" the code in the Arduino IDE, when performing this action the code will compile and if successful (no syntax errors) it will proceed to load the program. When the IDE starts loading the program (When Arduino IDE says **Uploading**) we reset the badge by PRESSING the reset button so that the bootloader accepts writing the new firmware to memory.
 
-After publishing, StackEdit keeps your file linked to that publication which makes it easy for you to re-publish it. Once you have modified your file and you want to update your publication, click on the **Publish now** button in the navigation bar.
-
-> **Note:** The **Publish now** button is disabled if your file has not been published yet.
-
-## Manage file publication
-
-Since one file can be published to multiple locations, you can list and manage publish locations by clicking **File publication** in the **Publish** sub-menu. This allows you to list and remove publication locations that are linked to your file.
-
-
-# Markdown extensions
-
-StackEdit extends the standard Markdown syntax by adding extra **Markdown extensions**, providing you with some nice features.
-
-> **ProTip:** You can disable any **Markdown extension** in the **File properties** dialog.
-
-
-## SmartyPants
-
-SmartyPants converts ASCII punctuation characters into "smart" typographic punctuation HTML entities. For example:
-
-|                |ASCII                          |HTML                         |
-|----------------|-------------------------------|-----------------------------|
-|Single backticks|`'Isn't this fun?'`            |'Isn't this fun?'            |
-|Quotes          |`"Isn't this fun?"`            |"Isn't this fun?"            |
-|Dashes          |`-- is en-dash, --- is em-dash`|-- is en-dash, --- is em-dash|
-
-
-## KaTeX
-
-You can render LaTeX mathematical expressions using [KaTeX](https://khan.github.io/KaTeX/):
-
-The *Gamma function* satisfying $\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$ is via the Euler integral
-
-$$
-\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
-$$
-
-> You can find more information about **LaTeX** mathematical expressions [here](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference).
-
-
-## UML diagrams
-
-You can render UML diagrams using [Mermaid](https://mermaidjs.github.io/). For example, this will produce a sequence diagram:
-
-```mermaid
-sequenceDiagram
-Alice ->> Bob: Hello Bob, how are you?
-Bob-->>John: How about you John?
-Bob--x Alice: I am good thanks!
-Bob-x John: I am good thanks!
-Note right of John: Bob thinks a long<br/>long time, so long<br/>that the text does<br/>not fit on a row.
-
-Bob-->Alice: Checking with John...
-Alice->John: Yes... John, how are you?
-```
-
-And this will produce a flow chart:
-
-```mermaid
-graph LR
-A[Square Rect] -- Link text --> B((Circle))
-A --> C(Round Rect)
-B --> D{Rhombus}
-C --> D
-```
