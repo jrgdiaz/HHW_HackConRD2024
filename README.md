@@ -131,7 +131,7 @@ Imagine all the LED animations **ChatGPT** can generate for you.
 
 ## Sonido
 
-El badge utiliza el PIN físico 3 para controlar el buzzer
+El badge utiliza el PIN físico 3 para controlar el buzzer.
 
 El buzzer integrado puede utilizarse para generar melodias.
 
