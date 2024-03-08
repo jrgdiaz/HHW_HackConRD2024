@@ -197,7 +197,7 @@ Finally, we proceed in the Arduino IDE with Tools > Burn Bootloader, with the sa
 
 ## Cargar código de Arduino IDE al HackConRD Badge
 
-Para esto simplemente hacemos las conexiones al convertidor de USB a Serial con el badge, conectamos a la maquina y le damos "Upload" al código en el IDE de Arduino, al realizar esta acción el código compilara y si no hay errores de sintaxis se procedera a cargar el programa. Cuando el IDE empiece a cargar el programa (Cuando Arduino IDEA diga **Uploading**) reiniciamos el badge PRESIONANDO el botón de reset para que el bootloader acepte la escritura del nuevo firmware en memoria. 
+Para esto simplemente hacemos las conexiones al convertidor de USB a Serial con el badge, conectamos a la maquina y le damos "Upload" al código en el IDE de Arduino, al realizar esta acción el código compilara y si no hay errores de sintaxis se procedera a cargar el programa. Cuando el IDE empiece a cargar el programa (Cuando Arduino IDE diga **Uploading**) reiniciamos el badge PRESIONANDO el botón de reset para que el bootloader acepte la escritura del nuevo firmware en memoria. 
 
 ## Upload Arduino IDE code on the HackConRD Badge
 
