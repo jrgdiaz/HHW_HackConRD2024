@@ -131,7 +131,7 @@ Imagine all the LED animations **ChatGPT** can generate for you.
 
 ## Sonido
 
-El badge utiliza el PIN físico 3 para controlar el buzzer.
+El badge utiliza el PIN físico 3 para controlar el buzzer
 
 El buzzer integrado puede utilizarse para generar melodias.
 
@@ -176,8 +176,7 @@ Optiboot refers to the bootloader that we will use, there are others but Optiboo
 **It will not be necessary to install the bootloader to the HackConRD 2024 badge since it comes with it installed. This section is only to document how to install the bootloader if necessary, for more information you can watch the following video, where the same process is explained:**
 
  [How To Program An Attiny85 With An Arduino Nano](https://www.youtube.com/watch?v=h9b01GlaEKQ)
-
-Finally, we proceed in the Arduino IDE with Tools > Burn Bootloader, with the same ATTiny45/85 (Optiboot) that we had selected previously.
+ 
 
 # Conexiones para quemar Bootloader | Connections to Burn Bootloader onto ATTiny85
 
@@ -193,6 +192,8 @@ Finally, we proceed in the Arduino IDE with Tools > Burn Bootloader, with the sa
 - ![WHITE](https://placehold.co/15x15/FFFFFF/FFFFFF.PNG) RESET PIN <-> D10
 
 Finalmente, procedemos en el Arduino IDE con Tools > Burn Bootloader, con el mismo  ATTiny45/85 (Optiboot) que habiamos seleccionado anteriormente.
+
+Finally, we proceed in the Arduino IDE with Tools > Burn Bootloader, with the same ATTiny45/85 (Optiboot) that we had selected previously.
 
 ## Cargar código de Arduino IDE al HackConRD Badge
 
