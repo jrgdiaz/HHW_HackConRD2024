@@ -11,6 +11,8 @@ colocar script en .ipython/profile_default/startup/
 abrir jupyter notebooks y en la terminal instalar pyserial
 
 pip install pyserial
+
+probado en windows 10 
 '''
 # Copyright (c) Rene Juneau
 # Distributed under the terms of the GNU General Public License V3.
