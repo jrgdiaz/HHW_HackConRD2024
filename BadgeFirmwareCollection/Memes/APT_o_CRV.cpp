@@ -5,7 +5,7 @@ void setup() {
 void loop() {
 
   Serial.println(F("\033[2J")); // Clear the screen
-  Serial.println(F("\u001b[34m      (K TRU QUIEREEE, UN APARTAMENTO......)"));
+  Serial.println(F("\u001b[34m      (K TU QUIEREEE, UN APARTAMENTO......)"));
   Serial.println(F("\u001b[34m     / "));
   Serial.println(F("\u001b[34m   O   "));
   Serial.println(F("\u001b[34m  /|\\  "));
@@ -19,7 +19,7 @@ void loop() {
   Serial.println(F("  / \\  "));
   delay(3500);
   Serial.println(F("\033[2J")); // Clear the screen
-  Serial.println(F("\x1b[35m ( UN APARTAMEEEEEENTOOOO! <3 <3 ^.^ )"));
+  Serial.println(F("\x1b[35m ( UN APARTAMEEEEEENTOOOO! :3 <3 <3 ^.^ )"));
   Serial.println(F("\x1b[35m                                   \\ "));
   Serial.println(F("\x1b[35m                                  \\  O /"));
   Serial.println(F("\x1b[35m                                     |"));
